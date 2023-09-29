@@ -6,7 +6,6 @@ import org.iesvdm.tiendaOnline.WebUser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class WebUserCustomerAccountTest
@@ -26,11 +25,12 @@ public class WebUserCustomerAccountTest
         Account account2 = new Account(customer2, "Dirección2", false, fechaOpen2, null);
 
         //Comprobamos que se han creado correctamente
-        Assertions.assertNotNull(webUser1);
-        Assertions.assertNotNull(customer1);
-        Assertions.assertNotNull(account1);
-        Assertions.assertNotNull(webUser2);
-        Assertions.assertNotNull(customer2);
-        Assertions.assertNotNull(account2);
+        Assertions.assertEquals("usuario1", webUser1.getLogin_id());
+        Assertions.assertEquals("Dirección1", customer1.getAdress());
+        Assertions.assertEquals(fechaOpen1, account1.getOpen());
+
+        Assertions.assertEquals(WebUser.State.ACTIVE, webUser2.getState());
+        Assertions.assertEquals("987654321", customer2.getPhone());
+        Assertions.assertEquals(null, account2.getClosed());
     }
 }

@@ -13,7 +13,7 @@ public class ProductTest
         Product product2 = new Product("2", "Producto 2", "Proveedor 2");
 
         //Comprobamos que se han creado
-        Assertions.assertNotNull(product1);
-        Assertions.assertNotNull(product2);
+        Assertions.assertEquals("Producto 1", product1.getName());
+        Assertions.assertEquals("Proveedor 2", product2.getSupplier());
     }
 }
