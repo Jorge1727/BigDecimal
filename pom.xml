@@ -19,5 +19,29 @@
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.0</version>
         </dependency>
+        <dependency>
+            <groupId>primitive-math</groupId>
+            <artifactId>primitive-math</artifactId>
+            <version>0.1.6</version>
+        </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>clojars</id>
+            <name>Clojars</name>
+            <url>https://repo.clojars.org/</url>
+        </repository>
+    </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>19</source>
+                    <target>19</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

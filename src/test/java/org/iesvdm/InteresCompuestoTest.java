@@ -17,8 +17,8 @@ public class InteresCompuestoTest {
         int periodos = 10;
 
         //TODO
-        InteresCompuesto interesCompuesto = null;
-        BigDecimal cantidadFinal = null;
+        InteresCompuesto interesCompuesto = new InteresCompuesto(new BigDecimal(principal),BigDecimal.valueOf(interes), periodos);
+        BigDecimal cantidadFinal = interesCompuesto.calculaMontoFinal();
 
         Assertions.assertEquals(new BigDecimal("1628.89"), cantidadFinal);
     }

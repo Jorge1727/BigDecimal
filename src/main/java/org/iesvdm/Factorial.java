@@ -15,7 +15,12 @@ public class Factorial {
         this.n = n;
     }
 
-    public BigInteger getFactorial() {
+    public BigInteger getFactorial()
+    {
+        if (factorial == null)//Para que si es null pille la funcion
+        {
+            factorial = calcula();
+        }
         return factorial;
     }
 
@@ -30,9 +35,17 @@ public class Factorial {
             throw new RuntimeException("Valor " + n + " no permitido.");
     }
 
-    public BigInteger calcula() {
-        //TODO totototto
-        return null;
+    public BigInteger calcula()
+    {
+        //TODO
+        BigInteger resultado = BigInteger.valueOf(1);
+
+        for (long i = 2; i <= n; i++)
+        {
+            resultado = resultado.multiply(BigInteger.valueOf(i));
+        }
+
+        return resultado;
     }
 
 }
