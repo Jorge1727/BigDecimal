@@ -10,21 +10,13 @@ public class Posicion {
         this.longitud = longitud;
     }
 
-    public float getLatitud() {
-        return latitud;
-    }
+    public float getLatitud() {return latitud;}
 
-    public void setLatitud(float latitud) {
-        this.latitud = latitud;
-    }
+    public void setLatitud(float latitud) {this.latitud = latitud;}
 
-    public float getLongitud() {
-        return longitud;
-    }
+    public float getLongitud() {return longitud;}
 
-    public void setLongitud(float longitud) {
-        this.longitud = longitud;
-    }
+    public void setLongitud(float longitud) {this.longitud = longitud;}
 
     //Creamos la clase Extensiones
     public class Extensiones
@@ -46,7 +38,8 @@ public class Posicion {
             return RadioTierraKm * (float) c;
         }
 
-        private static float enRadianes(float valor) {
+        private static float enRadianes(float valor)
+        {
             return (float) (Math.PI / 180) * valor;
         }
     }

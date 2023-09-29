@@ -28,7 +28,8 @@ public class Factorial {
         this.factorial = factorial;
     }
 
-    public Factorial(long n) {
+    public Factorial(long n)
+    {
         if ( n >= 0)
             this.n = n;
         else
