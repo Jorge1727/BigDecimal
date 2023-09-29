@@ -80,10 +80,15 @@ public class Order
         this.shoppingCart = shoppingCart;
     }
 
-    private BigDecimal calculoTotal() {
-        if (shoppingCart != null) {
+    //Cálculo total del contenido del carrito
+    private BigDecimal calculoTotal()
+    {
+        if (shoppingCart != null)
+        {
             return shoppingCart.getTotalPrice();
-        } else {
+        }
+        else
+        {
             return BigDecimal.ZERO;
         }
     }

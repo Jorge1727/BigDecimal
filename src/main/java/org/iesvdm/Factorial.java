@@ -17,7 +17,7 @@ public class Factorial {
 
     public BigInteger getFactorial()
     {
-        if (factorial == null)//Para que si es null pille la funcion
+        if (factorial == null)//Para que si es null coga la función
         {
             factorial = calcula();
         }

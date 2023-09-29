@@ -71,7 +71,7 @@ public class Payment
         this.productos = productos;
     }
 
-    public boolean realizarPago() //Pone a 0euros la cuenta y elimina los productos del carrito
+    public boolean realizarPago() //Pone a 0 euros la cuenta y elimina los productos del carrito
     {
         BigDecimal total = getTotal();
         boolean hizoElPago = false;
